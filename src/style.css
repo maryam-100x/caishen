@@ -583,6 +583,19 @@ h1 {
   transition: transform 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .main-body {
+    transform: scale(0.85) translateY(-30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-body {
+    transform: scale(0.8) translateY(-20px);
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .app {

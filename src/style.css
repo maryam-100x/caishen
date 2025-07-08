@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --gold: #FFD700;
+  --dark-gold: #D4AF37;
+  --red: #8B0000;
+  --dark-red: #5A0000;
+  --light-red: #FF2400;
+  --black: #1A1A1A;
+  --rich-black: #0D0D0D;
+  --white: #FFFFFF;
+  --off-white: #FFF2C2;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: var(--rich-black);
+  overflow: hidden;
+  font-family: 'Noto Serif SC', serif;
+  cursor: url('/gold-coin.png'), auto;
+  color: var(--gold);
+}
+
+.app {
+  background-color: #f34242; /* Light Chinese Red */
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(10, 0, 0, 0.85);
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: var(--gold);
+  padding: 2rem;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px var(--gold), 0 0 40px var(--light-red);
+  animation: glow 2s infinite alternate;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 15px var(--gold), 0 0 40px var(--light-red);
+  }
+  to {
+    text-shadow: 0 0 25px var(--gold), 0 0 60px var(--light-red), 0 0 80px rgba(255, 69, 0, 0.7);
+  }
+}
+
+.sub {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--off-white);
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.contract-box {
+  background: rgba(255, 215, 0, 0.15);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 0 auto 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  backdrop-filter: blur(8px);
+  max-width: 90%;
+  font-family: 'Roboto Mono', monospace;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.contract-box:hover {
+  background: rgba(255, 215, 0, 0.25);
+  box-shadow: 0 0 25px var(--gold);
+  transform: translateY(-2px);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* FIXED: Removed CSS hover effects to prevent conflict with Framer Motion */
+.buttons a, .buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  font-weight: 500;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  /* REMOVED: transition property that was causing conflicts */
+  min-width: 140px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* ADDED: Ensure stable positioning */
+  position: relative;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.social-btn {
+  background: linear-gradient(145deg, var(--gold), var(--dark-gold));
+  color: var(--black);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.twitter {
+  background: linear-gradient(145deg, #000000, #1DA1F2);
+  color: white;
+}
+
+.chart {
+  background: linear-gradient(145deg, #4CAF50, #2E7D32);
+  color: white;
+}
+
+.bonk {
+  background: linear-gradient(145deg, #FF6B00, #FF9500);
+  color: white;
+}
+
+.red-envelope-btn {
+  background: linear-gradient(145deg, var(--light-red), var(--red)) !important;
+  color: var(--gold) !important;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* REMOVED: CSS hover effects to prevent flickering */
+/* .buttons a:hover, .buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+} */
+
+.about {
+  margin: 2rem auto 0;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--gold);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  color: var(--off-white);
+  backdrop-filter: blur(8px);
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.about h2 {
+  margin: 0 0 1rem;
+  font-size: 1.8rem;
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  font-weight: 500;
+}
+
+.about p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.blessings {
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-top: 1.5rem !important;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  background: linear-gradient(145deg, var(--red), var(--dark-red));
+  color: var(--gold);
+  border: 3px solid var(--gold);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 40px var(--gold), 0 10px 60px rgba(139, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.modal-box h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 15px var(--gold);
+  position: relative;
+}
+
+.modal-box p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--off-white);
+  line-height: 1.6;
+}
+
+.ready-btn {
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(145deg, var(--gold), var(--dark-gold));
+  color: var(--black);
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ready-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, var(--dark-gold), var(--gold));
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.ready-btn:hover::before {
+  opacity: 1;
+}
+
+.ready-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Coin animations */
+.coins-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.coin {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('/gold-coin.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
+}
+
+/* Wealth counter */
+.wealth-counter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Cai Shen image */
+.caishen-image-container {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.caishen-image {
+  position: relative;
+  width: 220px;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.caishen-image img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px var(--gold));
+  transition: transform 0.3s;
+}
+
+.click-me {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  animation: pulse 2s infinite;
+  font-family: 'Roboto', sans-serif;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.7; transform: scale(1); }
+}
+
+/* Red envelope modal */
+.red-envelope-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.envelope-content {
+  background: linear-gradient(145deg, var(--red), var(--dark-red));
+  border: 3px solid var(--gold);
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 40px var(--gold);
+}
+
+.close-envelope {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.close-envelope:hover {
+  background: rgba(255, 215, 0, 0.2);
+}
+
+.fortune {
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 2px dashed var(--gold);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.fortune-bonus {
+  color: var(--off-white);
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
+/* Mute button */
+.mute-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.mute-btn:hover {
+  background: rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 15px var(--gold);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .sub {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .buttons a, .buttons button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .about {
+    padding: 1.2rem;
+  }
+  
+  .caishen-image {
+    width: 180px;
+  }
+  
+  .modal-box {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .sub {
+    font-size: 1rem;
+  }
+  
+  .contract-box {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  
+  .wealth-counter {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .mute-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+.blurred {
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box.floating {
+  background: rgba(139, 0, 0, 0.85);
+  border: 3px solid gold;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 0 40px gold;
+  backdrop-filter: blur(3px);
+}

@@ -701,3 +701,17 @@ body, html {
     overflow: auto;
   }
 }
+
+.social-btn {
+  background: linear-gradient(145deg, var(--gold), var(--dark-gold));
+  color: var(--black);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0.75rem; /* Reduced padding */
+  border-radius: 8px;      /* Slightly smaller corners */
+  min-width: auto;         /* Let it size to content */
+  width: auto;
+  height: 40px;            /* Matches logo size better */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

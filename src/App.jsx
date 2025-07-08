@@ -158,14 +158,15 @@ export default function App() {
 
           <div className="buttons">
   <motion.a
-    href="https://x.com"
-    target="_blank"
-    className="social-btn"
-    whileHover={{ scale: 1.05, y: -3 }}
-    whileTap={{ scale: 0.98 }}
-  >
-    Official 𝕏
-  </motion.a>
+  href="https://x.com"
+  target="_blank"
+  className="social-btn"
+  whileHover={{ scale: 1.05, y: -3 }}
+  whileTap={{ scale: 0.98 }}
+  style={{ fontSize: '35px', lineHeight: '1' }} // ← 👈 this line
+>
+  𝕏
+</motion.a>
   <motion.a
   href="https://dexscreener.com"
   target="_blank"
@@ -173,8 +174,7 @@ export default function App() {
   whileHover={{ scale: 1.05, y: -3 }}
   whileTap={{ scale: 0.98 }}
 >
-  <img src="/dex.png" alt="DEX" style={{ height: '20px', marginRight: '8px', verticalAlign: 'middle' }} />
-  DEX
+  <img src="/dex.png" alt="DEX" style={{ height: '40px', marginRight: '8px', verticalAlign: 'middle' }} />
 </motion.a>
 
 <motion.a
@@ -184,8 +184,7 @@ export default function App() {
   whileHover={{ scale: 1.05, y: -3 }}
   whileTap={{ scale: 0.98 }}
 >
-  <img src="/bonk_fun.png" alt="Bonk" style={{ height: '20px', marginRight: '8px', verticalAlign: 'middle' }} />
-  letsbonk.fun
+  <img src="/bonk_fun.png" alt="Bonk" style={{ height: '40px', marginRight: '8px', verticalAlign: 'middle' }} />
 </motion.a>
   <motion.button
     className="red-envelope-btn"

@@ -204,7 +204,7 @@ export default function App() {
           <div className="about">
             <h2>About Caishen</h2>
             <p>
-              Caishen is the god of wealth — and he's just launched on Bonk.
+              Caishen is the god of wealth  and he's just launched on Bonk.
               Whether you're praying for generational wealth or just aping for vibes,
               this is your red envelope to prosperity.
             </p>

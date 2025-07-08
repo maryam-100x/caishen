@@ -18,7 +18,7 @@ body, html {
   min-height: 100vh; /* Changed from height: 100vh */
   background: var(--rich-black);
   /* REMOVED: overflow: hidden; */
-  font-family: 'Noto Serif SC', serif;
+  font-family: 'ChineseFont', 'Noto Serif SC', serif; /* fallback included */
   cursor: url('/gold-coin.png'), auto;
   color: var(--gold);
 }
@@ -919,6 +919,22 @@ body, html {
   height: auto;
 }
 
+@font-face {
+  font-family: 'ChineseFont';
+  src: url('/fonts/chinese.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
+@font-face {
+  font-family: 'ChineseFont';
+  src: url('/fonts/chinese.otf') format('opentype'); /* Update path if needed */
+  font-display: swap;
+}
+
+* {
+  font-family: 'ChineseFont', 'Roboto', 'Noto Serif SC', sans-serif !important;
+  font-size: 1.05em !important; /* or 1.1em if you want bigger */
+}
 

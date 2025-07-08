@@ -587,7 +587,7 @@ h1 {
 }
 
 .main-body {
-  transform: scale(0.85) translateY(-200px);
+  transform: scale(1) translateY(-80px);
   transition: transform 0.3s ease;
 }
 
@@ -947,109 +947,146 @@ body, html {
   font-size: 1.05em !important; /* or 1.1em if you want bigger */
 }
 
-/* Simple fixed sizing solution - add to bottom of CSS */
-
-/* Set a consistent base font size */
-html {
-  font-size: 16px;
-}
-
-/* Use rem units for consistent scaling */
+/* UNIVERSAL SIZE OVERRIDE - PASTE AT BOTTOM OF CSS */
+/* Reset all positioning and sizing */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
-/* Override font sizes to use rem instead of em for consistency */
+/* Main app container fixes */
+.app {
+  min-height: 100vh !important;
+  width: 100vw !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove any unwanted overlay background */
+
+
+/* Content container fixes */
+.content {
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  background: transparent !important;
+}
+
+/* Responsive text sizing */
 h1 {
-  font-size: 4.8rem !important;
+  font-size: clamp(2rem, 5vw, 4rem) !important;
+  line-height: 1.2 !important;
+  margin: 0.5em 0 !important;
 }
 
 .sub {
-  font-size: 1.68rem !important;
+  font-size: clamp(1rem, 2vw, 1.4rem) !important;
 }
 
-.contract-box {
-  font-size: 1.44rem !important;
+/* Consistent buttons */
+.buttons a, 
+.buttons button,
+.contract-box,
+.social-btn {
+  width: auto !important;
+  min-width: 120px !important;
+  height: auto !important;
+  padding: 12px 24px !important;
+  margin: 8px !important;
+  font-size: clamp(0.9rem, 2vw, 1.1rem) !important;
 }
 
-.about h2 {
-  font-size: 2.16rem !important;
+/* Image fixes */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
 }
 
-.about p {
-  font-size: 1.32rem !important;
+.logo-scroll {
+  width: 100% !important;
+  max-width: 600px !important;
 }
 
-.modal-box h2 {
-  font-size: 2.64rem !important;
+.caishen-image {
+  width: 200px !important;
 }
 
-.modal-box p {
-  font-size: 1.32rem !important;
+/* Fixed position elements */
+.mute-btn,
+.wealth-counter {
+  position: fixed !important;
+  z-index: 1000 !important;
+}
+
+.mute-btn {
+  top: 20px !important;
+  left: 20px !important;
 }
 
 .wealth-counter {
-  font-size: 1.08rem !important;
+  top: 20px !important;
+  right: 20px !important;
 }
 
-.ready-btn {
-  font-size: 1.32rem !important;
+/* Special elements */
+.red-envelope-btn {
+  position: fixed !important;
+  z-index: 0.5 !important;
+  font-size: 3rem !important;
 }
 
-.fortune {
-  font-size: 1.8rem !important;
+.red-envelope-inner {
+  transform: scale(1.5) !important;
 }
 
-.fortune-bonus {
-  font-size: 1.56rem !important;
-}
-
-.click-me {
-  font-size: 1.2rem !important;
-}
-
-.blessings {
-  font-size: 1.44rem !important;
-}
-
-/* Prevent browser zoom affecting layout */
-body {
-  zoom: 1;
-  -moz-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-/* Consistent button sizing */
-.buttons a, .buttons button {
-  min-height: 57.6px; /* 48px * 1.2 */
-}
-
-/* Mobile adjustments stay the same but use rem */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3.36rem !important;
+  .content {
+    padding: 10px !important;
   }
-
-  .sub {
-    font-size: 1.44rem !important;
+  
+  .buttons-row {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .caishen-image {
+    width: 150px !important;
+  }
+  
+  .lantern {
+    width: 80px !important;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2.64rem !important;
+    font-size: 1.8rem !important;
   }
-
-  .sub {
-    font-size: 1.2rem !important;
-  }
-
+  
   .contract-box {
-    font-size: 1.2rem !important;
+    padding: 8px 12px !important;
+    font-size: 0.9rem !important;
   }
-
+  
+  .buttons a, 
+  .buttons button {
+    min-width: 100px !important;
+    padding: 10px 16px !important;
+  }
+  
+  .mute-btn,
   .wealth-counter {
-    font-size: 0.96rem !important;
+    transform: scale(0.9) !important;
   }
+}
+
+/* Prevent overflow */
+* {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
 }

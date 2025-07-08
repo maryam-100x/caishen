@@ -784,7 +784,7 @@ body, html {
 /* Add this new class */
 .red-envelope-inner {
   display: inline-block;
-  transform: scale(3);
+  transform: scale(2);
   transform-origin: center;
   transition: transform 0.2s ease;
 }

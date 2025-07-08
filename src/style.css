@@ -843,7 +843,7 @@ body, html {
 
 .coins-bg {
   position: absolute;
-  top: 600px; /* ← move it down as needed */
+  top: 620px; /* ← move it down as needed */
   left: 0;
   width: 100vw;
   height: auto;

@@ -111,13 +111,13 @@ export default function App() {
           {isMuted ? "🔇" : "🔊"}
         </motion.button>
 
-         <motion.button
+        <motion.button
   className="red-envelope-btn"
   whileHover={{ scale: 1.05, y: -3 }}
   whileTap={{ scale: 0.98 }}
   onClick={openRedEnvelope}
 >
-  🧧
+  <span className="red-envelope-inner">🧧</span>
 </motion.button>
 
         {/* Falling coins */}

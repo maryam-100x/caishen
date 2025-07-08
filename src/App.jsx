@@ -12,7 +12,7 @@ export default function App() {
   const [showRedEnvelope, setShowRedEnvelope] = useState(false)
   const [fortune, setFortune] = useState('')
   const [isMuted, setIsMuted] = useState(false)
-  const contract = "Soon"
+  const contract = "DqWncvpoTj6n6qRCJ5vJ4nqHvcQnKqvQoJZ6oL4Jbonk"
   const audioRef = useRef(null)
   const coinAudioRef = useRef(null)
 
@@ -184,7 +184,7 @@ export default function App() {
     <img src="/x.png" alt="X" style={{ height: '70px' }} />
   </motion.a>
   <motion.a
-    href="https://dexscreener.com"
+    href="https://dexscreener.com/solana/9fw4guyvdjv6vdyhzxqxdyxikb1zvqebdhx85814ixwn"
     target="_blank"
     whileHover={{ scale: 1.05, y: -3 }}
     whileTap={{ scale: 0.98 }}
@@ -192,7 +192,7 @@ export default function App() {
     <img src="/dex.png" alt="Dex" style={{ height: '70px' }} />
   </motion.a>
   <motion.a
-    href="https://letsbonk.fun"
+    href="https://letsbonk.fun/token/DqWncvpoTj6n6qRCJ5vJ4nqHvcQnKqvQoJZ6oL4Jbonk"
     target="_blank"
     whileHover={{ scale: 1.05, y: -3 }}
     whileTap={{ scale: 0.98 }}

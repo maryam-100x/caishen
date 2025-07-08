@@ -574,3 +574,8 @@ h1 {
   box-shadow: 0 0 40px gold;
   backdrop-filter: blur(3px);
 }
+
+.main-body {
+  transform: translateY(-120px); /* Adjust this value as needed */
+  transition: transform 0.3s ease;
+}

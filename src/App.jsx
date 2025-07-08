@@ -127,14 +127,16 @@ export default function App() {
         </div>
 
         {/* Main content with conditional blur */}
-        <div className={`content ${!showMain ? 'blurred' : ''}`}>
-          <motion.div
+        <motion.div
             className="wealth-counter"
             whileHover={{ scale: 1.05 }}
             onClick={() => addCoins(1)}
           >
             💰 Wealth Collected: {wealth}
           </motion.div>
+        <div className="main-body">
+        <div className={`content ${!showMain ? 'blurred' : ''}`}>
+          
 
           <motion.div
             initial={{ scale: 0 }}
@@ -226,6 +228,7 @@ export default function App() {
               <div className="click-me">Click me for blessings!</div>
             </motion.div>
           </div>
+        </div>
         </div>
 
         {/* Red Envelope Modal */}

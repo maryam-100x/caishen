@@ -285,7 +285,7 @@ export default function App() {
                   whileHover={{ scale: 1.1 }}
                   onClick={startExperience}
                 >
-                  I’m Ready
+                  Start
                 </motion.button>
               </motion.div>
             </motion.div>

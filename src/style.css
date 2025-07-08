@@ -587,7 +587,7 @@ h1 {
 }
 
 .main-body {
-  transform: scale(0.8) translateY(-80px);
+  transform: scale(0.8) translateY(-180px);
   transition: transform 0.3s ease;
 }
 

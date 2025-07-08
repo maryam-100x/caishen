@@ -41,7 +41,7 @@ body, html {
 
 .overlay {
   position: absolute;
-  background: rgba(10, 0, 0, 0.85);
+  background: rgba(10, 0, 0, 0.4);
   inset: 0;
   display: flex;
   align-items: flex-start; /* Changed from center */

@@ -144,7 +144,7 @@ export default function App() {
             transition={{ type: 'spring', stiffness: 200 }}
           >
             <h1>🏮 財神到 🧧</h1>
-            <p className="sub">Cai Shen blesses your bags with infinite gains.</p>
+            <p className="sub">Caishen blesses your bags with infinite gains.</p>
           </motion.div>
 
           <motion.div
@@ -199,14 +199,14 @@ export default function App() {
 
 
           <div className="about">
-            <h2>About Cai Shen</h2>
+            <h2>About Caishen</h2>
             <p>
-              Cai Shen is the god of wealth — and he's just launched on Bonk.
+              Caishen is the god of wealth — and he's just launched on Bonk.
               Whether you're praying for generational wealth or just aping for vibes,
               this is your red envelope to prosperity.
             </p>
             <p className="blessings">
-              Cai Shen has blessed you {blessings} time{blessings !== 1 ? 's' : ''}!
+              Caishen has blessed you {blessings} time{blessings !== 1 ? 's' : ''}!
             </p>
           </div>
 
@@ -217,7 +217,7 @@ export default function App() {
             >
               <motion.img
                 src="/caishen.png"
-                alt="Cai Shen"
+                alt="Caishen"
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 onClick={() => {
@@ -275,7 +275,7 @@ export default function App() {
                 animate={{ scale: 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 120 }}
               >
-                <h2>💰 CAI SHEN APPROACHES 💰</h2>
+                <h2>💰 CAISHEN APPROACHES 💰</h2>
                 <p>This site may cause sudden wealth, irrational optimism, and compulsive bag-holding.</p>
                 <p>Proceed only if you're ready for unimaginable gains.</p>
                 <motion.button

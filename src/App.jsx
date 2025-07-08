@@ -76,24 +76,24 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.loop = true
-      audioRef.current.volume = 0.1
-    }
+  if (audioRef.current) {
+    audioRef.current.loop = true
+    audioRef.current.volume = 0.1
+  }
+}, [])
 
-    const coinInterval = setInterval(() => {
-      if (showMain && Math.random() > 0.7) {
-        addCoins(1)
-      }
-    }, 3000)
-
-    return () => clearInterval(coinInterval)
-  }, [showMain])
 
   return (
     <div className="app">
+      <img src="/COINS.png" alt="Coins Overlay" className="coins-bg" />
       <audio ref={audioRef} src={bgm} />
       <audio ref={coinAudioRef} src={coinSound} />
+
+      <div className="clouds">
+  <img src="/CLOUD3.png" alt="Cloud 3" className="cloud cloud-back" />
+  <img src="/CLOUD2.png" alt="Cloud 2" className="cloud cloud-mid" />
+  <img src="/CLOUD1.png" alt="Cloud 1" className="cloud cloud-front" />
+</div>
 
       <div className="overlay">
         {/* Mute button */}
@@ -105,6 +105,15 @@ export default function App() {
         >
           {isMuted ? "🔇" : "🔊"}
         </motion.button>
+
+         <motion.button
+  className="red-envelope-btn"
+  whileHover={{ scale: 1.05, y: -3 }}
+  whileTap={{ scale: 0.98 }}
+  onClick={openRedEnvelope}
+>
+  🧧
+</motion.button>
 
         {/* Falling coins */}
         <div className="coins-container">
@@ -143,8 +152,11 @@ export default function App() {
             animate={{ scale: 1 }}
             transition={{ type: 'spring', stiffness: 200 }}
           >
-            <h1>🏮 財神到 🧧</h1>
-            <p className="sub">Caishen blesses your bags with infinite gains.</p>
+<img
+  src="/logoscroll.png"
+  alt="Logo Scroll"
+  className="logo-scroll"
+/>
           </motion.div>
 
           <motion.div
@@ -157,46 +169,33 @@ export default function App() {
           </motion.div>
 
           <div className="buttons">
+              <div className="buttons-row">
   <motion.a
-  href="https://x.com"
-  target="_blank"
-  className="social-btn"
-  whileHover={{ scale: 1.05, y: -3 }}
-  whileTap={{ scale: 0.98 }}
-  style={{ fontSize: '35px', lineHeight: '1' }} // ← 👈 this line
->
-  𝕏
-</motion.a>
-  <motion.a
-  href="https://dexscreener.com"
-  target="_blank"
-  className="social-btn"
-  whileHover={{ scale: 1.05, y: -3 }}
-  whileTap={{ scale: 0.98 }}
->
-  <img src="/dex.png" alt="DEX" style={{ height: '40px', marginRight: '8px', verticalAlign: 'middle' }} />
-</motion.a>
-
-<motion.a
-  href="https://letsbonk.fun"
-  target="_blank"
-  className="social-btn"
-  whileHover={{ scale: 1.05, y: -3 }}
-  whileTap={{ scale: 0.98 }}
->
-  <img src="/bonk_fun.png" alt="Bonk" style={{ height: '40px', marginRight: '8px', verticalAlign: 'middle' }} />
-</motion.a>
-  <motion.button
-    className="red-envelope-btn"
+    href="https://x.com"
+    target="_blank"
     whileHover={{ scale: 1.05, y: -3 }}
     whileTap={{ scale: 0.98 }}
-    onClick={openRedEnvelope}
   >
-    🧧 Open Red Envelope
-  </motion.button>
+    <img src="/x.png" alt="X" style={{ height: '70px' }} />
+  </motion.a>
+  <motion.a
+    href="https://dexscreener.com"
+    target="_blank"
+    whileHover={{ scale: 1.05, y: -3 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    <img src="/dex.png" alt="Dex" style={{ height: '70px' }} />
+  </motion.a>
+  <motion.a
+    href="https://letsbonk.fun"
+    target="_blank"
+    whileHover={{ scale: 1.05, y: -3 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    <img src="/bonk_fun.png" alt="Bonk" style={{ height: '70px' }} />
+  </motion.a>
+    </div>
 </div>
-
-
           <div className="about">
             <h2>About Caishen</h2>
             <p>

@@ -858,7 +858,7 @@ body, html {
   top: 0;
   width: 200px; /* Adjust based on your asset */
   height: auto;
-  z-index: 20;
+  z-index: 4;
   pointer-events: none;
 }
 
@@ -873,6 +873,13 @@ body, html {
   left: 75%; /* center of right half (50% + 50% / 2) */
   transform: translateX(-50%);
 }
+
+@media (max-width: 768px) {
+  .lantern {
+    width: 50px; /* Or smaller if you like */
+  }
+}
+
 
 .coins-bottom {
   position: fixed;
@@ -894,7 +901,7 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0.5;
+  z-index: 1;
   pointer-events: none;
 }
 

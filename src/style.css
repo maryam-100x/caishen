@@ -15,17 +15,17 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh; /* Changed from height: 100vh */
   background: var(--rich-black);
-  overflow: hidden;
+  /* REMOVED: overflow: hidden; */
   font-family: 'Noto Serif SC', serif;
   cursor: url('/gold-coin.png'), auto;
   color: var(--gold);
 }
 
 .app {
-  background-color: #f34242; /* Light Chinese Red */
-  height: 100vh;
+  background-color: #f34242;
+  min-height: 100vh; /* Changed from height: 100vh */
   width: 100vw;
   position: relative;
   display: flex;
@@ -34,6 +34,7 @@ body, html {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  padding: 2rem 0; /* Add padding for mobile spacing */
 }
 
 .overlay {
@@ -41,8 +42,10 @@ body, html {
   background: rgba(10, 0, 0, 0.85);
   inset: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Changed from center */
   justify-content: center;
+  padding-top: 2rem; /* Add top padding */
+  min-height: 100vh; /* Ensure it covers full height */
 }
 
 .content {
@@ -576,6 +579,100 @@ h1 {
 }
 
 .main-body {
-  transform: translateY(-50px); /* Adjust this value as needed */
+  transform: scale(0.9) translateY(-30px);
   transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem 0;
+    align-items: flex-start; /* Allow content to start from top */
+  }
+  
+  .overlay {
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+  
+  .content {
+    padding: 1rem;
+    margin-top: 0;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .sub {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .buttons a, .buttons button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .about {
+    padding: 1.2rem;
+    margin-top: 1.5rem; /* Reduce top margin */
+  }
+  
+  .caishen-image {
+    width: 180px;
+  }
+  
+  .modal-box {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 0.5rem 0;
+  }
+  
+  .overlay {
+    padding-top: 0.5rem;
+  }
+  
+  .content {
+    padding: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .sub {
+    font-size: 1rem;
+  }
+  
+  .contract-box {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  
+  .wealth-counter {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .mute-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .about {
+    margin-top: 1rem;
+  }
 }

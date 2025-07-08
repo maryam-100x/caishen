@@ -961,55 +961,55 @@ html {
 
 /* Override font sizes to use rem instead of em for consistency */
 h1 {
-  font-size: 4rem !important;
+  font-size: 4.8rem !important;
 }
 
 .sub {
-  font-size: 1.4rem !important;
+  font-size: 1.68rem !important;
 }
 
 .contract-box {
-  font-size: 1.2rem !important;
+  font-size: 1.44rem !important;
 }
 
 .about h2 {
-  font-size: 1.8rem !important;
+  font-size: 2.16rem !important;
 }
 
 .about p {
-  font-size: 1.1rem !important;
+  font-size: 1.32rem !important;
 }
 
 .modal-box h2 {
-  font-size: 2.2rem !important;
+  font-size: 2.64rem !important;
 }
 
 .modal-box p {
-  font-size: 1.1rem !important;
+  font-size: 1.32rem !important;
 }
 
 .wealth-counter {
-  font-size: 0.9rem !important;
+  font-size: 1.08rem !important;
 }
 
 .ready-btn {
-  font-size: 1.1rem !important;
+  font-size: 1.32rem !important;
 }
 
 .fortune {
-  font-size: 1.5rem !important;
+  font-size: 1.8rem !important;
 }
 
 .fortune-bonus {
-  font-size: 1.3rem !important;
+  font-size: 1.56rem !important;
 }
 
 .click-me {
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
 }
 
 .blessings {
-  font-size: 1.2rem !important;
+  font-size: 1.44rem !important;
 }
 
 /* Prevent browser zoom affecting layout */
@@ -1022,34 +1022,34 @@ body {
 
 /* Consistent button sizing */
 .buttons a, .buttons button {
-  min-height: 48px;
+  min-height: 57.6px; /* 48px * 1.2 */
 }
 
 /* Mobile adjustments stay the same but use rem */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.8rem !important;
+    font-size: 3.36rem !important;
   }
-  
+
   .sub {
-    font-size: 1.2rem !important;
+    font-size: 1.44rem !important;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2.2rem !important;
+    font-size: 2.64rem !important;
   }
-  
+
   .sub {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
   }
-  
+
   .contract-box {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
   }
-  
+
   .wealth-counter {
-    font-size: 0.8rem !important;
+    font-size: 0.96rem !important;
   }
 }

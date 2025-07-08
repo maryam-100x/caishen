@@ -576,6 +576,6 @@ h1 {
 }
 
 .main-body {
-  transform: translateY(-60px); /* Adjust this value as needed */
+  transform: translateY(-50px); /* Adjust this value as needed */
   transition: transform 0.3s ease;
 }

@@ -85,7 +85,10 @@ export default function App() {
 
   return (
     <div className="app">
-      <img src="/COINS.png" alt="Coins Overlay" className="coins-bg" />
+      <img src="/bg2.png" alt="Background Layer 2" className="bg2-overlay" />
+<img src="/COINS.png" alt="Coins Decoration" className="coins-bottom" />
+      <img src="/LANTERN1.png" alt="Lantern Left" className="lantern lantern-left" />
+<img src="/LANTERN2.png" alt="Lantern Right" className="lantern lantern-right" />
       <audio ref={audioRef} src={bgm} />
       <audio ref={coinAudioRef} src={coinSound} />
 
@@ -94,6 +97,8 @@ export default function App() {
   <img src="/CLOUD2.png" alt="Cloud 2" className="cloud cloud-mid" />
   <img src="/CLOUD1.png" alt="Cloud 1" className="cloud cloud-front" />
 </div>
+<img src="/PAPER.png" alt="Paper" className="paper-overlay" />
+
 
       <div className="overlay">
         {/* Mute button */}
@@ -171,7 +176,7 @@ export default function App() {
           <div className="buttons">
               <div className="buttons-row">
   <motion.a
-    href="https://x.com"
+    href="https://x.com/caishenonbonk"
     target="_blank"
     whileHover={{ scale: 1.05, y: -3 }}
     whileTap={{ scale: 0.98 }}
